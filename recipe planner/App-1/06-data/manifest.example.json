@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "content_version": "1.0.0",
+  "updated_at": "2026-10-30T10:00:00Z",
+  "files": [
+    {"id": "categories", "path": "categories/categories.json", "version": 1},
+    {"id": "ingredients", "path": "ingredients/ingredients.json", "version": 1},
+    {"id": "gujarati_recipes", "path": "recipes/indian/gujarati.json", "version": 1}
+  ]
+}
