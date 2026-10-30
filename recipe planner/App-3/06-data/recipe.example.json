@@ -1,0 +1,58 @@
+{
+  "id": "recipe_herb_roasted_vegetables",
+  "schema_version": 1,
+  "locale": "en",
+  "title": "Herb-Roasted Vegetables",
+  "description": "A flexible tray of seasonal vegetables with herbs and olive oil.",
+  "image": "recipes/herb-roasted-vegetables.webp",
+  "cuisine_ids": ["global_home_cooking"],
+  "category_ids": ["vegetarian", "side"],
+  "prep_minutes": 15,
+  "cook_minutes": 30,
+  "difficulty": "easy",
+  "servings": 4,
+  "ingredients": [
+    {
+      "ingredient_id": "vegetable_mixed",
+      "display_name": "Mixed vegetables",
+      "quantity": { "amount": 600, "unit": "g" },
+      "group": "Main"
+    },
+    {
+      "ingredient_id": "oil_olive",
+      "display_name": "Olive oil",
+      "quantity": { "amount": 2, "unit": "tbsp" },
+      "group": "Seasoning"
+    },
+    {
+      "ingredient_id": "herb_mixed",
+      "display_name": "Chopped fresh herbs",
+      "quantity": { "amount": 1, "unit": "tbsp", "qualifier": "optional" },
+      "group": "Seasoning"
+    },
+    {
+      "ingredient_id": "salt",
+      "display_name": "Salt",
+      "quantity": { "qualifier": "to_taste" },
+      "group": "Seasoning"
+    }
+  ],
+  "instructions": [
+    { "step": 1, "text": "Heat the oven to 220°C / 425°F and prepare a baking tray." },
+    { "step": 2, "text": "Cut vegetables into similar-sized pieces." },
+    { "step": 3, "text": "Toss with oil, herbs, and salt." },
+    { "step": 4, "text": "Roast until tender and lightly browned, turning once." }
+  ],
+  "tags": ["flexible", "weeknight"],
+  "nutrition": null,
+  "allergens": {
+    "verified": false,
+    "items": []
+  },
+  "translations": {
+    "en": {
+      "title": "Herb-Roasted Vegetables",
+      "description": "A flexible tray of seasonal vegetables with herbs and olive oil."
+    }
+  }
+}
