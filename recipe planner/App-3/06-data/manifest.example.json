@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "content_version": "2026.10.1",
+  "generated_at": "2026-10-30T00:00:00Z",
+  "default_locale": "en",
+  "supported_locales": ["en"],
+  "recipe_index": {
+    "path": "content/recipes/index.json",
+    "sha256": "REPLACE_WITH_REAL_SHA256"
+  },
+  "ingredient_index": {
+    "path": "content/ingredients/index.json",
+    "sha256": "REPLACE_WITH_REAL_SHA256"
+  },
+  "category_index": {
+    "path": "content/categories/index.json",
+    "sha256": "REPLACE_WITH_REAL_SHA256"
+  },
+  "asset_base": "assets/",
+  "files": [
+    {
+      "path": "content/recipes/index.json",
+      "byte_size": 0,
+      "sha256": "REPLACE_WITH_REAL_SHA256",
+      "content_type": "application/json"
+    },
+    {
+      "path": "content/ingredients/index.json",
+      "byte_size": 0,
+      "sha256": "REPLACE_WITH_REAL_SHA256",
+      "content_type": "application/json"
+    }
+  ]
+}
