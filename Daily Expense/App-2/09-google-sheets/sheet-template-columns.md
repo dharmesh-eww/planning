@@ -1,0 +1,3 @@
+# Google Sheets Workbook Template
+
+Tabs: Transactions, Accounts, Categories, Budgets, Transfers, optional RecurringRules, AppMetadata. Use stable machine column IDs separate from localized display labels. Include UUID, record type, integer minor amount, ISO currency, local transaction date, UTC timestamps, revision and tombstone. Never store tokens/secrets. Preview exact exported fields and require confirmation. Warn that spreadsheet collaborators can read its contents.
