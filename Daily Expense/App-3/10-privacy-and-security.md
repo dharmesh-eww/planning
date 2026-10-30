@@ -1,0 +1,3 @@
+# Privacy and Security
+
+No mandatory login, developer server, Firebase or app-owned cloud database. SQLite local source of truth; optional Sheets only with consent. No financial transaction/balance/note/account/budget data to developer analytics. OAuth tokens in secure platform storage. Narrow scopes and clear explanation. Protect app-switcher snapshots and notification previews in privacy mode. No bank scraping, credential collection, SMS parsing or open banking. Google Sheets sharing permissions control who can read the workbook. Animation diagnostics must not capture finance screens.
