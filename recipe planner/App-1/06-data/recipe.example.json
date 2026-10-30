@@ -1,0 +1,31 @@
+{
+  "id": "guj_001",
+  "title": "Gujarati Dhokla",
+  "slug": "gujarati-dhokla",
+  "description": "Soft, savory steamed dhokla with a light tempering.",
+  "image": "images/recipes/gujarati-dhokla.webp",
+  "thumbnail": "images/recipes/thumbs/gujarati-dhokla.webp",
+  "category_ids": ["breakfast", "snacks"],
+  "cuisine_id": "gujarati",
+  "food_type": "vegetarian",
+  "dietary_tags": [],
+  "difficulty": "easy",
+  "preparation_time": 15,
+  "cooking_time": 20,
+  "servings": 4,
+  "ingredients": [
+    {"ingredient_id": "besan", "amount": 1, "amount_type": "quantity", "unit": "cup", "is_optional": false},
+    {"ingredient_id": "curd", "amount": 0.5, "amount_type": "quantity", "unit": "cup", "is_optional": false},
+    {"ingredient_id": "ginger", "amount": 1, "amount_type": "quantity", "unit": "tsp", "is_optional": false}
+  ],
+  "equipment": ["steamer", "mixing bowl"],
+  "steps": [
+    {"step": 1, "instruction": "Mix besan, curd, and water into a smooth batter."},
+    {"step": 2, "instruction": "Add ginger and seasoning, then mix gently."},
+    {"step": 3, "instruction": "Steam until cooked through and finish with tempering.", "duration_minutes": 20}
+  ],
+  "tips": ["Rest the batter briefly for a softer texture."],
+  "tags": ["gujarati", "steamed", "snack"],
+  "image_attribution": "Replace with the actual image licence/creator attribution.",
+  "is_published": true
+}
