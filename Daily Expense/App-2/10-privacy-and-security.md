@@ -1,0 +1,3 @@
+# Privacy and Security
+
+No mandatory account, developer server, Firebase or app-owned cloud database. SQLite is local source of truth; Sheets is optional and consent-based. Never send transaction contents, balances, notes, account names or budgets to developer analytics. OAuth tokens in secure platform storage only. Request narrow scopes and explain transfer. Protect app-switcher snapshots and notification previews in privacy mode. No bank credential collection, SMS parsing or scraping. Do not imply Google Sheets is private cloud storage; sharing permissions control access. Animation diagnostics must not capture finance screen contents.
