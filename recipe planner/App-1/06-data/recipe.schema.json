@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Recipe",
+  "type": "object",
+  "required": ["id", "title", "slug", "description", "image", "category_ids", "cuisine_id", "food_type", "difficulty", "preparation_time", "cooking_time", "servings", "ingredients", "steps", "is_published"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "slug": {"type": "string"},
+    "description": {"type": "string"},
+    "image": {"type": "string"},
+    "thumbnail": {"type": "string"},
+    "category_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "cuisine_id": {"type": "string"},
+    "food_type": {"type": "string", "enum": ["vegetarian", "vegan", "eggetarian", "non_vegetarian", "pescatarian"]},
+    "dietary_tags": {"type": "array", "items": {"type": "string"}},
+    "difficulty": {"type": "string", "enum": ["easy", "medium", "hard"]},
+    "preparation_time": {"type": "integer", "minimum": 0},
+    "cooking_time": {"type": "integer", "minimum": 0},
+    "servings": {"type": "number", "exclusiveMinimum": 0},
+    "ingredients": {"type": "array", "items": {"type": "object", "required": ["ingredient_id", "amount_type", "unit"], "properties": {"ingredient_id": {"type": "string"}, "amount": {"type": ["number", "null"], "minimum": 0}, "amount_type": {"type": "string", "enum": ["quantity", "to_taste", "as_needed"]}, "unit": {"type": "string"}, "is_optional": {"type": "boolean"}, "preparation_note": {"type": "string"}}, "additionalProperties": false}},
+    "equipment": {"type": "array", "items": {"type": "string"}},
+    "steps": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["step", "instruction"], "properties": {"step": {"type": "integer", "minimum": 1}, "instruction": {"type": "string", "minLength": 1}, "duration_minutes": {"type": "integer", "minimum": 0}, "image": {"type": "string"}}, "additionalProperties": false}},
+    "tips": {"type": "array", "items": {"type": "string"}},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "image_attribution": {"type": "string"},
+    "is_published": {"type": "boolean"}
+  },
+  "additionalProperties": false
+}
