@@ -1,0 +1,25 @@
+{
+  "id": "recipe_001",
+  "slug": "simple-vegetable-soup",
+  "localized": {"en": {"title": "Simple Vegetable Soup", "description": "A flexible vegetable soup for a comforting meal."}},
+  "image": "images/recipes/simple-vegetable-soup.webp",
+  "category_ids": ["lunch", "dinner"],
+  "cuisine_id": "global",
+  "food_type": "vegan",
+  "dietary_tags": ["plant_based"],
+  "difficulty": "easy",
+  "preparation_time_minutes": 10,
+  "cooking_time_minutes": 25,
+  "servings": 2,
+  "ingredients": [
+    {"ingredient_id": "carrot", "amount": 2, "amount_type": "quantity", "unit_id": "piece", "is_optional": false},
+    {"ingredient_id": "salt", "amount": null, "amount_type": "to_taste", "unit_id": null, "is_optional": false}
+  ],
+  "steps": [
+    {"step": 1, "localized_instruction": {"en": "Wash and prepare the vegetables."}},
+    {"step": 2, "localized_instruction": {"en": "Simmer the vegetables until tender."}}
+  ],
+  "source": {"name": "Original editorial content", "url": null},
+  "image_licence": {"type": "owned", "creator": null, "attribution": null},
+  "is_published": true
+}
