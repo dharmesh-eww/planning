@@ -1,0 +1,14 @@
+{
+  "asset_key": "transaction_saved",
+  "path": "assets/animations/transaction_saved.json",
+  "source_url": "",
+  "author": "",
+  "license": "",
+  "license_verified": false,
+  "version": "1.0.0",
+  "duration_ms": 800,
+  "file_size_bytes": 0,
+  "loop": false,
+  "reduced_motion_fallback": "check_circle",
+  "semantic_key": "transaction_saved_accessibility"
+}
