@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "content_version": "1.0.0",
+  "default_language": "en",
+  "supported_languages": ["en", "en-GB", "fr", "es", "de", "ar"],
+  "updated_at": "2026-10-30T10:00:00Z",
+  "files": [
+    {"id": "categories", "path": "catalog/categories.json", "version": 1},
+    {"id": "cuisines", "path": "catalog/cuisines.json", "version": 1},
+    {"id": "ingredients", "path": "catalog/ingredients.json", "version": 1},
+    {"id": "units", "path": "catalog/units.json", "version": 1},
+    {"id": "recipes_global", "path": "recipes/global.json", "version": 1}
+  ]
+}
