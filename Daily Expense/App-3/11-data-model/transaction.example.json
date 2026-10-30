@@ -1,0 +1,15 @@
+{
+  "id": "7aeb5df1-4f42-4ad2-90f7-a84b97b9f2a1",
+  "type": "expense",
+  "amount_minor": 129900,
+  "currency_code": "INR",
+  "category_id": "food",
+  "account_id": "cash-wallet",
+  "transaction_date": "2026-10-30",
+  "note": "Groceries",
+  "created_at": "2026-10-30T10:15:00Z",
+  "updated_at": "2026-10-30T10:15:00Z",
+  "deleted_at": null,
+  "revision": 1,
+  "sync_status": "local_only"
+}
