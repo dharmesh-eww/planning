@@ -27,6 +27,7 @@ Today · Plans · Train · Progress · Profile
 - [Lottie catalog](07-lottie-catalog.md)
 - [Localization](08-localization.md)
 - [Assets and content](09-assets-and-content.md)
+- [PNG asset manifest](09-assets-and-content.md) — required filenames, dimensions, usage and release gate
 - [Visual references](10-visual-references/)
 
 Fitness guidance is educational, not diagnosis or medical treatment. Use licensed/original exercise imagery and reviewed safety instructions.
