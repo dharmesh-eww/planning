@@ -1,56 +1,66 @@
 # PawPal — App-1: Complete Product Plan
 
 ## Product concept
-**PawPal** is a practical pet-care companion for US dog and cat owners. It combines trusted educational care guides, breed profiles, training guidance, local pet profiles, user-created care schedules, and reminders. It is a personal utility, not a veterinary diagnosis or telemedicine product.
+**PawPal** is a practical pet-care companion for US dog and cat owners. It combines local pet profiles, care schedules, health-record organization, feeding/activity logs, breed and training education, checklists, emergency contacts and optional pet-sitter handoff. It is an educational organizer, not veterinary diagnosis or telemedicine.
 
 ## Product promise
-Keep each pet's everyday care information, routines, and learning resources organized in one friendly place.
+Keep everyday pet-care information and routines organized in one private, reliable place—even when offline.
 
 ## Target audience
-- Primary: US dog and cat owners and prospective adopters.
-- Secondary: first-time pet parents, multi-pet households, and families sharing care responsibilities on one device.
-- Initial content locale: English (United States), US customary units and Fahrenheit, with metric equivalents available.
+- US dog and cat owners, prospective adopters and first-time pet parents.
+- Multi-pet households and families using a shared device (not cloud collaboration).
+- Initial locale: en-US; US customary units by default, metric equivalents available.
 
-## Hard product constraints
-- Flutter Android-first application.
-- No custom backend/server, Firebase, mandatory account, remote database, cloud sync, chat, or user-generated public feed.
+## Hard constraints
+- Flutter Android-first app.
+- No custom backend/server, Firebase, mandatory account, remote database, cloud sync, chat, social feed or public user-generated content.
 - Public GitHub repository supplies a limited, read-only catalog of editorial content and metadata.
-- User-created pet profiles, reminders, favorites, notes, and logs remain on the device.
-- GitHub content is cached locally; the app remains useful offline after first content download.
-- No personal pet or owner data is sent to GitHub.
-- No dark theme, dark palette, dark-mode switch, or theme preference. The product ships with a carefully designed light appearance only.
-- No medical diagnosis, treatment recommendations, medicine dosage, or emergency triage.
+- Pet profiles, records, reminders, logs, favorites, journal-style notes and preferences stay on-device.
+- GitHub content is cached and validated locally; local utility features work without network.
+- No personal pet/owner data is sent to GitHub or ad targeting.
+- Light appearance only: no dark theme, dark palette, theme switch or theme preference.
+- No diagnosis, treatment recommendations, medicine dosage, symptom checker or emergency triage.
 
 ## Main navigation
-1. **Home** — selected pet, today's care tasks, quick actions, seasonal tips, and recently viewed guides.
-2. **Discover** — search and browse care, training, health-awareness, behavior, nutrition, and breed content.
-3. **My Pets** — local pet profiles, care history, schedules, and notes.
-4. **Saved** — favorites, saved guides, and custom care checklists.
-5. **Settings** — reminders, units, privacy, content updates, export/import, and app information.
+Home · Discover · My Pets · Saved · Settings.
 
-## Feature coverage
-- Multiple local pet profiles for dogs and cats.
-- Pet details: name, species, breed/mix, birthday or estimated age, sex (optional), weight, photo, adoption date, microchip note (optional), allergies/conditions entered by owner (optional), vet contact details (optional).
-- Breed directory and breed detail pages.
-- Care guides, training lessons, behavior explainers, grooming, nutrition basics, enrichment, travel, seasonal safety, new-pet checklists, and senior-pet care.
-- Owner-created feeding, grooming, walking, cleaning, appointment, vaccination, and medication reminders. Medication schedule details are entered by the owner or veterinarian; the app never proposes dosage.
-- Local care logs: weight, grooming, walks, feeding notes, training sessions, and vet visits.
-- Search, filters, bookmarks, share, reading history, and content freshness indicators.
-- Local notifications with permission education and quiet-hour controls.
-- Export/import of local data using a user-selected file.
-- AdMob monetization with protected safety and task flows.
+## Complete functionality
+1. Multiple local dog/cat profiles, optional photos, breed/mix/unknown, age/date, weight and notes.
+2. Home dashboard with pet switcher, today/overdue/upcoming tasks, quick actions and weekly recorded-activity summary.
+3. User-defined reminders for feeding, water, walks, grooming, dental routine, training, appointments, vaccination follow-up, medication (owner-entered only) and custom tasks.
+4. Care logs for weight, feeding, activity, grooming, training, behavior observations, vet visits and owner-recorded medication administration.
+5. Private record organizer for vaccination, vet visits and preventive-care records, with optional local attachments.
+6. Feeding and activity journals; no diet prescriptions, calorie targets or health scoring.
+7. Reusable new-pet, life-stage, grooming, travel and home-preparation checklists.
+8. Vet, emergency and caregiver contact cards; curated, verified US emergency resource directory.
+9. Optional pet-sitter handoff sheet with explicit field selection, preview and user-controlled export.
+10. Breed library, positive-reinforcement training lessons, care guides, search, filters, saved items, collections and reading history.
+11. Calendar agenda, local notifications, quiet hours, offline cache and manual content updates.
+12. Versioned export/import with validation, preview, merge/replace, attachment handling and recovery backup.
 
-## Planned screens
-See `05-screens/`. The plan covers onboarding, home, pet list/profile/editor, reminders, care logs, Discover, search, article feed/detail, breed directory/detail, saved items, notifications, settings, content updates, and local data export/import.
+## Architecture and data ownership
+Flutter + Riverpod + repository pattern. Drift/SQLite is the source of truth for personal data. A bounded local cache stores validated public GitHub JSON and licensed editorial assets. Notifications are local. No account is required. Never upload pet information.
 
-## Architecture summary
-Flutter + Riverpod + repository pattern. SQLite (Drift) stores personal data; a small file cache stores validated GitHub JSON and downloaded editorial images. GitHub content is read-only and versioned. Local notifications are scheduled on-device. No account is required.
-
-## Content quality and safety
-Content must be written or reviewed by qualified veterinary professionals where it makes veterinary or health-related claims. Clearly distinguish general education from professional advice. Any urgent symptoms or suspected poisoning must direct users to contact a veterinarian or an appropriate US animal poison-control/emergency service immediately; do not attempt symptom diagnosis in-app.
+## Content and safety
+Veterinary claims require qualified veterinary review. Urgent safety resources must be verified, dated, available without ads and direct users to a veterinarian/emergency service. The app does not diagnose, prescribe, calculate medication doses or infer health risk.
 
 ## Monetization
-Use consent-aware AdMob placements on suitable discovery and editorial surfaces. Do not place ads in pet emergency guidance, medication/reminder creation, vet-contact details, profile editing, or safety-critical instructions. Rewarded ads are optional and must never unlock essential care or safety information.
+Consent-aware AdMob on non-critical discovery/editorial surfaces only. No ads in emergency content, vet contacts, records, medication/reminder creation, profile editing, care logs, sitter export or backup/restore. Rewarded ads never gate essential care information.
+
+## Appearance
+Premium warm light-only design. See `02-design/`. No dark-mode tokens, dark assets or theme controls.
+
+## Detailed plan index
+- `01-product/product-requirements.md` — product scope and constraints.
+- `02-design/` — visual and motion system.
+- `03-architecture-and-data.md`, `15-data-model-and-local-workflows.md` — app architecture, local entities, backup and sync boundaries.
+- `04-navigation-and-interaction.md`, `05-flows/`, `05-screens/` — navigation, journeys and screen behavior.
+- `06-data/`, `16-content-operations-and-safety.md` — GitHub JSON, editorial lifecycle and safety.
+- `07-privacy-and-security.md`, `08-monetization-and-ads.md` — privacy and advertising.
+- `09-accessibility-localization.md`, `10-assets-and-content.md` — inclusive UX and content.
+- `14-feature-expansion.md` — additional product features.
+- `17-detailed-qa-and-acceptance.md`, `11-testing-and-release.md` — QA and release gates.
+- `12-ui-reference-prompts.md`, `13-roadmap-and-acceptance.md` — UI direction and delivery stages.
 
 ## Definition of done
-All screens and key states specified; local data model and migrations defined; remote JSON schemas and example records included; offline/update behavior specified; light-only design system documented; privacy and safety boundaries explicit; release and QA checklist complete.
+All screens, data contracts, local workflows, edge cases, offline/update behavior, safety reviews, privacy, light-only appearance, ad placements, accessibility and release gates are specified. Core personal features work offline and no personal data leaves the device.
