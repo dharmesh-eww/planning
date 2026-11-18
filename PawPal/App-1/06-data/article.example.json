@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "dog-grooming-coat-basics",
+  "title": "A Simple Coat-Care Routine for Dogs",
+  "summary": "Understand the basics of brushing and coat maintenance.",
+  "species": ["dog"],
+  "life_stages": ["puppy", "adult", "senior"],
+  "category_ids": ["grooming"],
+  "tags": ["brushing", "coat-care"],
+  "reading_minutes": 4,
+  "hero_image": "assets/articles/dog-brushing.webp",
+  "body_blocks": [
+    {"type": "paragraph", "text": "Coat-care needs vary by coat type and individual dog."},
+    {"type": "heading", "text": "Build a gentle routine"},
+    {"type": "ordered_list", "items": ["Choose a suitable brush.", "Keep sessions short and positive.", "Stop if your dog shows discomfort."]}
+  ],
+  "reviewed_by": {"name": "Editorial reviewer", "credential": null},
+  "reviewed_at": "2026-10-01",
+  "updated_at": "2026-10-01",
+  "sources": [],
+  "safety_level": "general_education",
+  "safety_notice": "Ask a veterinarian or qualified groomer about skin or coat concerns.",
+  "related_ids": [],
+  "status": "published"
+}
