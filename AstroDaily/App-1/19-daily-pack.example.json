@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "pack_type": "daily_horoscopes",
+  "locale": "en-US",
+  "date": "2026-11-18",
+  "editorial_timezone": "America/New_York",
+  "published_at": "2026-11-18T05:00:00Z",
+  "updated_at": "2026-11-17T18:00:00Z",
+  "readings": [
+    {"id":"2026-11-18-aries-general","sign_id":"aries","period_type":"daily","period_start":"2026-11-18","period_end":"2026-11-18","category":"general","title":"Make Room for a Fresh Perspective","body":"Consider where a small change in routine could help you approach the day with curiosity.","prompt":"What is one new perspective you can make room for today?","status":"published"},
+    {"id":"2026-11-18-taurus-general","sign_id":"taurus","period_type":"daily","period_start":"2026-11-18","period_end":"2026-11-18","category":"general","title":"Return to What Grounds You","body":"A familiar routine may offer a useful moment to pause and focus.","prompt":"Which simple habit helps you feel grounded?","status":"published"},
+    {"id":"2026-11-18-gemini-general","sign_id":"gemini","period_type":"daily","period_start":"2026-11-18","period_end":"2026-11-18","category":"general","title":"Follow a Curious Question","body":"Give yourself time to explore an idea without needing an immediate answer.","prompt":"What would you like to understand better?","status":"published"},
+    {"id":"2026-11-18-cancer-general","sign_id":"cancer","period_type":"daily","period_start":"2026-11-18","period_end":"2026-11-18","category":"general","title":"Make Space to Recharge","body":"A gentle pause can help you notice what deserves your attention.","prompt":"What would a restorative break look like today?","status":"published"},
+    {"id":"2026-11-18-leo-general","sign_id":"leo","period_type":"daily","period_start":"2026-11-18","period_end":"2026-11-18","category":"general","title":"Share Your Creative Spark","body":"Look for a small way to bring warmth or creativity into an ordinary task.","prompt":"Where could you add a little creativity?","status":"published"},
+    {"id":"2026-11-18-virgo-general","sign_id":"virgo","period_type":"daily","period_start":"2026-11-18","period_end":"2026-11-18","category":"general","title":"Choose One Useful Detail","body":"Focus on one practical improvement instead of trying to perfect everything.","prompt":"What is one manageable thing to improve?","status":"published"},
+    {"id":"2026-11-18-libra-general","sign_id":"libra","period_type":"daily","period_start":"2026-11-18","period_end":"2026-11-18","category":"general","title":"Make Room for Balance","body":"Notice where a small adjustment could make your day feel more balanced.","prompt":"Which commitment could use a thoughtful boundary?","status":"published"},
+    {"id":"2026-11-18-scorpio-general","sign_id":"scorpio","period_type":"daily","period_start":"2026-11-18","period_end":"2026-11-18","category":"general","title":"Look Beneath the Surface","body":"A little reflection may help you understand what is motivating a choice.","prompt":"What question would help you see this more clearly?","status":"published"},
+    {"id":"2026-11-18-sagittarius-general","sign_id":"sagittarius","period_type":"daily","period_start":"2026-11-18","period_end":"2026-11-18","category":"general","title":"Keep Curiosity in Motion","body":"Explore a fresh idea while staying open to what you learn along the way.","prompt":"What small discovery would brighten your day?","status":"published"},
+    {"id":"2026-11-18-capricorn-general","sign_id":"capricorn","period_type":"daily","period_start":"2026-11-18","period_end":"2026-11-18","category":"general","title":"Take the Steady Route","body":"A realistic next step can be more useful than a perfect long-range plan.","prompt":"What is the next practical step you can take?","status":"published"},
+    {"id":"2026-11-18-aquarius-general","sign_id":"aquarius","period_type":"daily","period_start":"2026-11-18","period_end":"2026-11-18","category":"general","title":"Try an Unusual Angle","body":"A different point of view may help you approach a familiar task with fresh interest.","prompt":"What assumption could you revisit?","status":"published"},
+    {"id":"2026-11-18-pisces-general","sign_id":"pisces","period_type":"daily","period_start":"2026-11-18","period_end":"2026-11-18","category":"general","title":"Give Reflection Some Space","body":"Take a moment to notice what feels meaningful without rushing to define it.","prompt":"What feeling or idea deserves a little attention?","status":"published"}
+  ],
+  "disclaimer": "Astrology content is for entertainment and self-reflection, not factual prediction or professional advice."
+}
