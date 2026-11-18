@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-aries-general",
+  "sign_id": "aries",
+  "period_type": "daily",
+  "period_start": "2026-11-18",
+  "period_end": "2026-11-18",
+  "editorial_timezone": "America/New_York",
+  "category": "general",
+  "title": "Make Room for a Fresh Perspective",
+  "body": "A short reflective reading written as entertainment. Consider where a small change in routine could help you approach the day with curiosity.",
+  "reflection_prompt_id": "daily-curiosity",
+  "lucky_color": null,
+  "lucky_number": null,
+  "published_at": "2026-11-18T05:00:00Z",
+  "updated_at": "2026-11-17T18:00:00Z",
+  "disclaimer": "Astrology content is for entertainment and self-reflection, not factual prediction or professional advice.",
+  "status": "published"
+}
