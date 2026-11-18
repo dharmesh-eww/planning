@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "content_version": "2026.01.0",
+  "published_at": "2026-11-18T00:00:00Z",
+  "minimum_app_version": "1.0.0",
+  "files": [
+    {
+      "path": "categories/categories.json",
+      "version": 1,
+      "size_bytes": 1800,
+      "sha256": "REPLACE_WITH_REAL_SHA256",
+      "locale": "en-US",
+      "species": ["dog", "cat"]
+    },
+    {
+      "path": "articles/index.json",
+      "version": 1,
+      "size_bytes": 4200,
+      "sha256": "REPLACE_WITH_REAL_SHA256",
+      "locale": "en-US",
+      "species": ["dog", "cat"]
+    }
+  ],
+  "changelog": ["Initial editorial catalog"]
+}
