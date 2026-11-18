@@ -1,81 +1,57 @@
-# Product Requirements
+# Product Requirements — PawPal
 
 ## Vision and outcomes
-Help pet owners confidently manage everyday routines and find understandable, trustworthy educational information. The app should be useful even if the device is offline and should not require account creation.
+Help dog and cat owners organize everyday care, keep private records, remember routines and find understandable, trustworthy educational information. Useful without an account or network.
 
 ## User jobs
-1. Keep information about each pet in one private local profile.
-2. Remember recurring care tasks and appointments.
-3. Learn practical, safe care and training techniques.
-4. Find guidance by topic, pet type, breed, life stage, and keyword.
-5. Record simple care activities and review history.
-6. Save useful guides for quick access.
-7. Export or restore personal app data manually.
+1. Keep multiple pet profiles and care information organized privately.
+2. Remember recurring tasks, appointments and owner-entered follow-ups.
+3. Record feeding, activity, grooming, training and vet visits.
+4. Find safe care, training, breed and life-stage education.
+5. Prepare for adoption, travel, grooming and pet-sitter handoff.
+6. Keep emergency and veterinary contact details accessible offline.
+7. Save guides and export/restore local data manually.
 
 ## Functional requirements
 
 ### Pet profiles
-- Create, edit, archive, restore, and delete multiple pets.
-- Species: dog or cat for initial release; schema supports future species without promising content.
-- Store name, species, breed/mix, birth date or estimated age, sex (optional), weight and unit, photo path, adoption date, notes, and optional vet contact.
-- Allow unknown values and approximate dates; do not force sensitive or unnecessary fields.
-- Pet profile is local and never uploaded to content hosting or advertising systems.
+Create, edit, archive, restore and delete multiple dog/cat profiles. Fields: name, species, breed/mix/unknown, birth date or estimated age, optional sex, weight/unit, local photo path, adoption date, notes and optional vet contact. Unknown/approximate values allowed. Do not require microchip number, diagnosis, allergy or condition fields. If an owner chooses to record sensitive information in free text, explain it remains local and should be minimized.
 
-### Care routines and reminders
-- User-defined one-time and repeating reminders: feeding, water refresh, walk, litter/yard cleanup, grooming, nail trim, dental care, training, appointment, vaccination follow-up, and custom task.
-- Owner enters the schedule and any medication details from veterinary instructions.
-- Repeat rules: daily, selected weekdays, weekly, monthly, interval, and one-time.
-- Snooze, complete, skip, reschedule, pause, and edit.
-- Notification permission denial must not block app usage; show in-app task list.
-- Handle time-zone changes, daylight-saving transitions, reboot/rescheduling, and notification limits.
+### Reminders and calendar
+User-defined one-time/repeating feeding, water, walk, litter/yard cleanup, grooming, nail trim, dental routine, training, appointment, vaccination follow-up, medication (owner-entered from vet instructions only) and custom tasks. Repeat: daily, selected weekdays, weekly, monthly, interval and one-time. Support complete, undo, snooze, skip, pause, reschedule, edit, delete and history. Snooze must not change the recurrence rule. Calendar agenda supports week/month, pet/type filters and overdue history. Permission denial leaves in-app schedule usable.
+
+### Care records
+Local vaccination, vet visit and preventive-care records with owner-entered title, date, follow-up date, clinic, notes and optional attachments. Clearly label as owner-entered, not verified. No vaccine recommendation or due-date inference.
+
+### Feeding and activity
+Log food label, amount/unit, meal type and note; walks/play/training/enrichment duration and optional distance. Show history and simple descriptive summaries only. Never calculate diet plans, calories, ideal weight, activity prescriptions or medical scores.
 
 ### Care logs
-- Add dated entries for weight, feeding note, walk/activity, grooming, training, behavior observation, vet visit, and custom note.
-- Optional attachment references remain local; set storage limits and allow deletion.
-- Timeline filters by pet, event type, and date.
-- Weight chart uses selected unit and clearly labels entries; never infer a diagnosis from trends.
+Weight, feeding note, activity, grooming, training, behavior observation, vet visit, medication administered (owner-recorded) and custom entries. Optional local attachments with storage limits. Charts are descriptive and never diagnose.
 
-### Educational content
-- Article categories: getting started, preventive care awareness, nutrition basics, grooming, dental hygiene, behavior, training, exercise/enrichment, travel, seasonal safety, senior care, and adoption.
-- Each article includes species applicability, life-stage tags, review metadata, update date, safety note, sources/reviewer fields where appropriate, and related content.
-- Safety-sensitive pages use prominent professional-care guidance.
-- Search and filters work on downloaded content.
+### Checklists and handoff
+Editable checklists for new-pet setup, puppy/kitten basics, adoption transition, life-stage home review, grooming prep and travel prep. Optional pet-sitter handoff sheet includes only owner-selected fields after preview; no automatic sharing or live caregiver sync.
 
-### Breed library
-- Breed cards and details with temperament descriptors, size range, grooming needs, exercise tendencies, coat type, common care considerations, and suitability caveats.
-- Breed descriptions must avoid deterministic claims and stereotypes.
-- Mixed-breed pets can select “Mixed / Unknown”.
+### Emergency contacts and resources
+Owner-entered vet, emergency clinic and caregiver contacts. Curated US animal emergency/poison-control resource directory with source and verification date. Offline fallback for key safety guidance. No symptom checker, automatic location lookup or medical triage. Emergency content is never ad-gated.
 
-### Saved and discovery
-- Favorite articles and breeds; custom collections; recent history.
-- Search title, summary, body, tags, breed, and species.
-- Filters for dog/cat, life stage, topic, reading time, and content type.
-- Share a public article link or plain-text summary; never include private pet data by default.
+### Educational content and breed library
+Articles, positive-reinforcement training lessons, FAQs, breed profiles, life-stage guides, enrichment, travel and seasonal safety. Content includes species, tags, reviewer/source metadata, review date, safety tier, update date and related content. Breed descriptions are tendencies, not guarantees.
+
+### Discover, saved and sharing
+Search cached title, summary, body, tags, breed and species. Filters: dog/cat, life stage, topic, reading time and content type. Favorites, collections, reading history. Share public editorial content only by default.
 
 ### Data portability
-- Export pet profiles, reminders, logs, and preferences to a versioned JSON backup file.
-- Import with schema validation, preview, duplicate handling, and merge/replace choice.
-- Provide a backup-before-replace reminder.
-- Do not promise automatic cloud backup or cross-device synchronization.
+Versioned JSON export/import. Preview selected records; optionally include attachments in a documented archive. Import validates schema, size, IDs, references and attachment paths; supports merge/replace and conflict handling; creates a pre-import backup; performs transactional restore. Never trust filesystem paths from backup files.
 
 ## Non-functional requirements
-- Home and local pet records load without network.
-- Graceful loading, offline, stale-cache, empty, parse-error, and retry states.
-- Database migrations preserve user-created data.
-- Efficient image caching and bounded storage.
-- Accessible touch targets, text scaling, TalkBack semantics, contrast, and reduced motion.
-- All dates, weights, heights, and temperatures are formatted using locale-aware utilities.
+Local-first startup; offline pet records/reminders; bounded content and image cache; database migrations; atomic remote content updates; safe attachment cleanup; accessible text scaling/TalkBack/contrast/reduced motion; locale-aware dates and unit conversion; no personal data in network requests, logs, analytics or ad targeting.
 
 ## US defaults
-- English (US), Fahrenheit, pounds/inches, miles, and US date conventions by default.
-- Offer metric units in settings.
-- Do not hard-code assumptions into stored values; persist units explicitly.
+en-US, lb, in, °F, mi and US date conventions. Metric units configurable. Store values with explicit units.
 
-## Monetization requirements
-- AdMob banner/native placements only in non-critical content areas.
-- Interstitial frequency cap and natural transition rules.
-- No ads on emergency/safety articles, pet profile forms, reminders, logs, or data export/import.
-- No targeting based on pet health notes, allergies, medication details, or other private local records.
+## Monetization
+Native/banner ads only on non-critical browse surfaces. Interstitial disabled in MVP. No ads in emergency guidance, vet contacts, records, reminders, medication, profile forms, care logs, sitter handoff or backup/import. No sensitive local-data targeting.
 
 ## Explicit exclusions
-No diagnosis, symptom checker, treatment planner, medicine dosage calculator, prescription reminders prefilled with medical advice, veterinarian booking marketplace, telehealth, social network, user-uploaded public content, location tracking, lost-pet live network, payments, or developer-operated server.
+Diagnosis, symptom checker, treatment planner, dosage calculator, medicine advice, vet marketplace, telehealth, social network, public uploads, live lost-pet network, location tracking, payments, accounts, server, Firebase and cloud sync.
