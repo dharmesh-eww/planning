@@ -50,8 +50,8 @@ Refined daylight editorial light-only design; subtle constellation line art, cre
 ## Detailed plan index
 - `01-product/product-requirements.md` — product scope.
 - `02-design/` — visual direction.
-- `03-architecture-and-data.md`, `06-data/`, `15-content-scale-and-data-contracts.md` — architecture, JSON schemas and publishing pipeline.
-- `04-navigation-and-interaction.md`, `05-flows/`, `05-screens/` — navigation and screen behavior.
+- `03-architecture-and-data.md`, `06-data/`, `15-content-scale-and-data-contracts.md`, `19-daily-pack.example.json` — architecture, JSON schemas and publishing pipeline.
+- `04-navigation-and-interaction.md`, `05-flows/`, `05-screens/`, `18-screen-matrix-and-acceptance.md` — navigation and complete screen behavior.
 - `14-feature-expansion.md` — archive, share cards, notifications and engagement.
 - `07-privacy-and-security.md`, `16-engagement-privacy-and-content-ethics.md` — privacy and ethical engagement.
 - `08-monetization-and-ads.md` — advertising.
