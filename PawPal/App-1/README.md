@@ -53,8 +53,8 @@ Premium warm light-only design. See `02-design/`. No dark-mode tokens, dark asse
 ## Detailed plan index
 - `01-product/product-requirements.md` — product scope and constraints.
 - `02-design/` — visual and motion system.
-- `03-architecture-and-data.md`, `15-data-model-and-local-workflows.md` — app architecture, local entities, backup and sync boundaries.
-- `04-navigation-and-interaction.md`, `05-flows/`, `05-screens/` — navigation, journeys and screen behavior.
+- `03-architecture-and-data.md`, `15-data-model-and-local-workflows.md` — architecture, local entities, backup and sync boundaries.
+- `04-navigation-and-interaction.md`, `05-flows/`, `05-screens/`, `18-screen-matrix-and-acceptance.md` — navigation, journeys and complete screen behavior.
 - `06-data/`, `16-content-operations-and-safety.md` — GitHub JSON, editorial lifecycle and safety.
 - `07-privacy-and-security.md`, `08-monetization-and-ads.md` — privacy and advertising.
 - `09-accessibility-localization.md`, `10-assets-and-content.md` — inclusive UX and content.
