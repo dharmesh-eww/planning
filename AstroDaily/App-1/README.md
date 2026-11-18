@@ -1,48 +1,63 @@
 # AstroDaily — App-1: Complete Product Plan
 
 ## Product concept
-AstroDaily is a bright, approachable zodiac and horoscope companion for US adults interested in astrology as entertainment, reflection, and lifestyle content. It offers daily/weekly/monthly readings, 12 zodiac sign profiles, compatibility explainers, lunar calendar content, journaling prompts, saved readings, and local reminders. It does not claim scientific certainty, guaranteed predictions, or professional advice.
+AstroDaily is a bright, approachable zodiac and horoscope companion for US adults interested in astrology as entertainment, reflection and lifestyle content. It offers dated daily/weekly/monthly readings, 12 zodiac profiles, compatibility explainers, a sourced lunar calendar, a reading archive, private journaling, share cards and local reminders. It does not claim scientific certainty, guaranteed predictions or professional advice.
 
 ## Product promise
-A thoughtful daily astrology check-in with clear, enjoyable content and useful ways to explore zodiac themes.
+A thoughtful daily astrology check-in with clear, enjoyable content and useful ways to explore zodiac traditions.
 
 ## Audience
-US adults interested in horoscopes, zodiac personality content, relationships, and self-reflection. Initial locale en-US. Avoid presenting the app as a birth-chart engine unless a genuine calculation system is implemented and validated.
+US adults interested in horoscopes, zodiac personality content, relationships and self-reflection. Initial locale en-US. Sun-sign readings are generalized editorial content, not personalized birth-chart calculations.
 
 ## Hard constraints
 - Flutter Android-first app.
-- No custom backend/server, Firebase, mandatory account, remote database, cloud sync, chat, or user-generated public feed.
-- GitHub-hosted public JSON is a limited, read-only source for horoscope/editorial content, sign metadata, compatibility content, and lunar calendar datasets.
-- Birth dates, selected sign, journal entries, favorites, preferences, and reminders stay locally.
-- Never send personal birth details or journal entries to GitHub.
-- Light appearance only. No dark theme, dark palette, theme switch, or theme preference.
-- Astrology content is entertainment/self-reflection, not medical, financial, legal, or guaranteed predictive advice.
+- No custom backend/server, Firebase, mandatory account, remote database, cloud sync, chat or public user-generated feed.
+- Public GitHub repository supplies limited, read-only horoscope/editorial JSON, sign metadata, compatibility content, lunar events and optional sourced calendar datasets.
+- Birth date, selected sign, journal, favorites, reading history, preferences and reminders stay local.
+- Never send personal birth details, selected sign or journal text to GitHub, analytics or ad targeting.
+- Light appearance only: no dark theme, dark palette, theme switch or theme preference.
+- Astrology is entertainment/self-reflection, not medical, financial, legal or guaranteed predictive advice.
 
 ## Navigation
 Today · Zodiac · Explore · Saved · Settings.
 
-## Main functionality
-1. Onboarding: choose zodiac sign manually or calculate a common sun sign from month/day; optional birth date stored locally only.
-2. Today: daily horoscope, general/love/career/wellbeing categories, sign selector, daily reflection prompt, share/save.
-3. Zodiac: 12 sign profiles with date ranges, element, modality, ruling planet, symbol, strengths/challenges framed as traditional associations.
-4. Daily, weekly and monthly readings with clear publication date and content period.
-5. Compatibility: pair two signs; explain traditional themes, communication prompts, and non-deterministic caveats.
-6. Lunar calendar: new/full/quarter moon dates and educational notes from precomputed JSON; device-local date display.
-7. Explore: astrology basics, elements, modalities, houses glossary (educational only), retrograde explainers, numerology-style entertainment only if separately scoped.
-8. Journal: private local reflection entries and prompts; no AI or server analysis.
-9. Saved readings, favorites, reading history, share cards and notifications.
-10. Local reminders for daily check-in, weekly reading, and lunar event; user controls time and quiet hours.
-11. Offline cached content and manual GitHub content updates.
-12. Export/import local journal, preferences, favorites and reminders using versioned JSON.
+## Complete functionality
+1. Onboarding with manual sign selection or optional common sun-sign selection from month/day; cusp override and local-only birth date.
+2. Today dashboard with daily reading, general/love/career/wellbeing categories, daily theme, reflection prompt, save/share and content date.
+3. 12 sign profiles with traditional element, modality, ruling planet and sign associations.
+4. Daily, weekly and monthly readings with explicit coverage dates and publication dates.
+5. Reading archive and calendar navigation for available historical content.
+6. Compatibility between any two signs, including same-sign, using non-deterministic themes and prompts—not scores.
+7. Precomputed lunar calendar with source, dataset version and local-time display.
+8. Explore library: astrology basics, elements, modalities, symbols, planets, history, chart glossary and sourced retrograde explainers.
+9. Private local journal, prompt library, favorites, reading history and optional reading streak/weekly recap.
+10. On-device share-card studio with preview and user-controlled sharing.
+11. Configurable daily/weekly/lunar notifications and quiet hours.
+12. Offline cached content, manual updates and versioned local export/import.
 
-## Important truthfulness boundary
-Static sign horoscopes are editorial readings, not individualized birth-chart calculations. Sun-sign date boundaries can be ambiguous near cusps and depend on year/time/time zone; allow manual sign override. Do not imply moon phases are live calculations: publish precomputed dates and label the source/time-zone basis. No birth chart, ascendant, houses, transits, or planetary positions unless computed by a verified ephemeris engine and clearly scoped in a later release.
+## Truthfulness boundaries
+Static sign horoscopes are editorial readings, not individualized birth-chart calculations. Common sign date ranges are approximate; cusp users can choose manually. Moon and retrograde events must be precomputed from documented sources; no simplistic client-side astronomy formula. No natal chart, ascendant, houses, planetary positions or live transit engine in MVP.
 
-## Architecture
-Flutter + Riverpod + repository pattern. SQLite via Drift stores personal data. GitHub JSON is read-only public content, fetched on a bounded schedule and cached locally. Local notifications are on-device. No login.
+## Architecture and data ownership
+Flutter + Riverpod + repository pattern. Drift/SQLite stores personal data. GitHub JSON is public read-only content with bounded fetch, validation and local cache. Local notifications only. No account/backend/Firebase/cloud sync.
 
 ## Monetization
-Consent-aware AdMob on Explore, zodiac directory, and reading feed after organic content. Keep ads out of journal entry, onboarding, settings, and reading share/export flows. Do not imply users must watch ads to receive essential content.
+Consent-aware AdMob in Explore/learning feeds and optionally zodiac directory after organic content. No ads inside reading bodies, journal, compatibility result, lunar detail, onboarding, settings or share-card flow. Interstitial disabled in MVP.
+
+## Appearance
+Refined daylight editorial light-only design; subtle constellation line art, cream/white surfaces, pale lavender, ink-plum text and clear indigo actions. No dark cosmic backgrounds or dark theme.
+
+## Detailed plan index
+- `01-product/product-requirements.md` — product scope.
+- `02-design/` — visual direction.
+- `03-architecture-and-data.md`, `06-data/`, `15-content-scale-and-data-contracts.md` — architecture, JSON schemas and publishing pipeline.
+- `04-navigation-and-interaction.md`, `05-flows/`, `05-screens/` — navigation and screen behavior.
+- `14-feature-expansion.md` — archive, share cards, notifications and engagement.
+- `07-privacy-and-security.md`, `16-engagement-privacy-and-content-ethics.md` — privacy and ethical engagement.
+- `08-monetization-and-ads.md` — advertising.
+- `09-date-time-and-content-operations.md` — dates and editorial operations.
+- `10-accessibility-localization.md`, `11-testing-and-release.md`, `17-detailed-qa-and-acceptance.md` — accessibility, QA and release.
+- `12-ui-reference-prompts.md`, `13-roadmap-and-acceptance.md` — UI direction and roadmap.
 
 ## Definition of done
-Complete screen/flow specs, light-only design system, local/remote schemas, date/time handling, content publishing rules, privacy and disclaimer, ad policy, offline/update behavior, testing and release checklist.
+Users can read clearly dated horoscopes without an account; archived content is never misrepresented as current; local personal data never leaves the device; GitHub access is bounded/read-only; timezone handling is correct; content has editorial review; disclaimers are visible; light-only design and ethical ads are enforced.
