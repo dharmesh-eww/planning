@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "content_version": "2026.11.0",
+  "published_at": "2026-11-18T00:00:00Z",
+  "minimum_app_version": "1.0.0",
+  "editorial_timezone": "America/New_York",
+  "files": [
+    {
+      "path": "signs/zodiac-signs.json",
+      "version": 1,
+      "size_bytes": 2400,
+      "sha256": "REPLACE_WITH_REAL_SHA256",
+      "locale": "en-US"
+    },
+    {
+      "path": "horoscopes/daily/2026-11-18.json",
+      "version": 1,
+      "size_bytes": 12000,
+      "sha256": "REPLACE_WITH_REAL_SHA256",
+      "locale": "en-US",
+      "date": "2026-11-18"
+    }
+  ],
+  "changelog": ["Initial sign and daily reading catalog"]
+}
