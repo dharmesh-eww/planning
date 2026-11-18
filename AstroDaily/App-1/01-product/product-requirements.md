@@ -1,41 +1,46 @@
-# Product Requirements
+# Product Requirements — AstroDaily
 
 ## User jobs
-- Read a daily horoscope for a selected sign.
-- Browse weekly/monthly readings and choose reading category.
-- Learn traditional zodiac sign characteristics.
-- Explore compatibility between two signs without deterministic claims.
-- Check upcoming lunar events and learn what they traditionally represent.
-- Save/share readings and keep private reflection notes.
-- Receive optional local reminders.
-- Use previously downloaded content offline.
+- Read a dated daily horoscope for a selected sign.
+- Browse weekly/monthly readings and historical archive.
+- Explore traditional zodiac sign characteristics.
+- Compare two signs through reflective compatibility content.
+- View sourced lunar events and educational material.
+- Save/share readings, create private journal entries and receive optional reminders.
+- Use cached content offline without an account.
 
 ## Sign and birth-date behavior
-Support all 12 Western tropical sun signs: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, Pisces. Store month/day and optional full birth date locally. Common date ranges are display guidance, not astronomical computation. Near boundary dates, show “Your sign may depend on birth year, exact time, and location” and offer manual sign selection. Never require birth time or birthplace for basic horoscopes.
+Support all 12 Western tropical sun signs. Users may select a sign manually or enter month/day; full birth date is optional and local-only. Common date ranges are approximate. For cusp dates, explain ambiguity and allow manual override. No birth time or birthplace is required for basic content. Do not infer ascendant or natal chart.
 
-## Horoscope content
-Daily, weekly and monthly reading periods. Categories: general, love/relationships, career/work, wellbeing/reflection. Each reading has sign_id, period_type, period_start/end, timezone_basis, title, body, prompt, lucky_color/number only if editorially authored, content_version, published_at, disclaimer, status. Avoid guarantees and deterministic statements. Do not present wellness text as medical advice or career text as financial advice.
+## Horoscope content and archive
+Daily, weekly and monthly readings. Categories: general, love/relationships, career/work, wellbeing/reflection. Every reading has stable ID, sign, period type, explicit start/end, editorial timezone, category, title/body, prompt, publication/update timestamps, locale, disclaimer, status and version. Archive navigation only shows published dates and clearly labels missing, stale, withdrawn or expired content. Never relabel an old reading as today's.
+
+## Reading experience and personalization
+Daily theme, optional concise/expanded versions, category preferences, text-size/line-spacing controls, mark-as-read, favorites and prompts. Personalization is local to selected sign and categories. Reading streak is optional, disableable and non-punitive. Weekly recap summarizes local reading/journal activity without interpreting mood or mental health.
 
 ## Compatibility
-Pair any two signs; support same-sign pairings. Provide traditional element/modality themes, strengths, possible friction, conversation prompts, and a reminder that real relationships depend on individuals. Never score a relationship as destined, doomed, or objectively compatible.
+Any pair, including same sign. Explain traditional element/modality themes, strengths, possible friction and conversation prompts. No numeric compatibility score, destiny labels or deterministic relationship claims.
 
-## Lunar calendar
-Display precomputed new moon, first quarter, full moon and last quarter events. Store UTC timestamp, event name, source, calculation dataset/version and timezone basis. Convert to device local time; show source and “times may vary by location” where appropriate. Do not calculate phases from a simplistic formula in the client.
+## Lunar calendar and learning
+Precomputed new moon, first quarter, full moon and last quarter events with UTC timestamp, source timezone, source, dataset version and verification date. Convert to device-local time. Learning library explains signs, elements, modalities, symbols, planets, zodiac history, chart vocabulary, retrogrades and misconceptions. Retrograde dates only appear when sourced/precomputed and reviewed. No simplistic client-side astronomy calculations.
 
-## Explore and learning
-Explain elements, modalities, symbols, planets, zodiac wheel, astrology history, chart vocabulary, retrograde concepts and common misconceptions. Do not claim scientific validation. Keep learning content clearly separated from daily reading content.
+## Journal and privacy
+Private local journal with date, prompt, free text, optional mood label and tags. Create/edit/search/delete/export. Never share by default; share preview explicitly excludes journal text unless user chooses it. No cloud analysis or sync.
 
-## Journal and personalization
-Private local journal entries with date, selected prompt, free text, mood label optional, tags and favorites. No remote sync, cloud analysis, or sharing by default. User can export/delete journal data. App personalization is based on locally selected sign and reading preferences only.
+## Share cards
+Generate cards locally from public reading content, sign, date, brand and disclaimer. Provide light templates, preview and platform share sheet. Never include journal entries by default.
 
 ## Notifications
-Optional daily horoscope, weekly reading, and lunar event reminders. User selects time, weekdays, quiet hours and categories. Local-only scheduling. Permission denial does not block content.
+Local daily, weekly and optional lunar/favorite-sign reminders. User controls time, weekdays, quiet hours and per-type toggles. Permission denial does not block content. Notification text must not expose journal or birth data and must not use alarming predictions.
 
-## Search and saved
-Search cached learning articles, sign profiles and readings. Save readings, favorite signs/topics, reading history and share text/image cards. Share content only; journal notes are excluded unless explicitly exported by the user.
+## Search, saved and calendar
+Search cached readings, signs, learning articles and compatibility content. Save favorites and reading history. Calendar/archive supports date navigation and explicit available-content indicators.
 
-## Non-functional
-Offline-first; clear stale/loading/error/empty states; locale-aware dates and time zones; accessible typography and controls; reliable local migrations; bounded network fetches; graceful fallback if GitHub content is unavailable.
+## Data portability
+Versioned JSON export/import for profile/preferences, journal, favorites, reminders and history. Preview, validate, merge/replace, resolve duplicate IDs and create pre-import backup. No automatic cloud backup.
+
+## Non-functional requirements
+Offline-first startup; bundled sign metadata; bounded remote packs; strict manifest/JSON/schema/checksum validation; atomic cache replacement; locale/timezone correctness; database migrations; accessibility; no personal data in network traffic, logs, analytics or ad SDKs.
 
 ## Explicit exclusions
-No guaranteed predictions, psychic services, live astrologer chat, user-to-user social network, birth-chart/ascendant calculation in MVP, financial/investment/medical/legal advice, exact event prediction, user-generated public horoscope content, account, server, Firebase or cloud sync.
+Guaranteed predictions, psychic services, astrologer chat, public social features, birth-chart/ascendant calculation in MVP, planetary position computation, financial/investment/medical/legal advice, exact event prediction, user-generated public content, account, backend, Firebase and cloud sync.
